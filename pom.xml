@@ -3,7 +3,19 @@
   <groupId>priv.kafka</groupId>
   <artifactId>kafkademo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+  <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>nexus</name>
+            <url>http://central.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
   <dependencies>
         <dependency>
             <groupId>org.apache.kafka</groupId>
@@ -31,11 +43,6 @@
             <version>0.10.2.1</version>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.7</version>
-        </dependency>
-        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.6</version>
@@ -44,13 +51,11 @@
             <groupId>org.powermock</groupId>
             <artifactId>powermock-api-easymock</artifactId>
             <version>1.7.3</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.powermock</groupId>
             <artifactId>powermock-module-junit4</artifactId>
             <version>1.7.3</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.ignite</groupId>
@@ -76,7 +81,6 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-hive_2.11</artifactId>
             <version>2.2.0</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>redis.clients</groupId>
@@ -87,7 +91,6 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming_2.11</artifactId>
             <version>2.2.0</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
@@ -99,5 +102,15 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.30</version>
         </dependency>
-    </dependencies>
+        <dependency>
+        	<groupId>org.apache.kafka</groupId>
+        	<artifactId>kafka-clients</artifactId>
+        	<version>0.11.0.0</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.alibaba</groupId>
+        	<artifactId>fastjson</artifactId>
+        	<version>1.2.60</version>
+        </dependency>
+  </dependencies>
 </project>
