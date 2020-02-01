@@ -36,7 +36,7 @@ public class JProducer extends Thread{
         // TODO Auto-generated method stub
         KafkaProducer<Object, Object> producer = new KafkaProducer<>(configure());
         // 发送100条json格式的数据
-        for(int i = 0; i < 100; i++) {
+        for(int i = 0; i < 10; i++) {
             JSONObject json = new JSONObject();
             json.put("id", i);
             json.put("ip", "162.168.0." + i);

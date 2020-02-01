@@ -46,7 +46,7 @@ public class JProducerSerial extends Thread{
         jss.setId("2018");
         jss.setSalary("100");
         
-        producer.send(new ProducerRecord<Object, Object>("mytopic1", "key" ,jss), new Callback() {
+        producer.send(new ProducerRecord<Object, Object>("mytopic", "key" ,jss), new Callback() {
             
             @Override
             public void onCompletion(RecordMetadata metadata, Exception e) {
