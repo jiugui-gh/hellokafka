@@ -43,7 +43,7 @@ public class JProducer extends Thread{
             json.put("date", new Date().toString());
             String key = "key" + i;
             
-            producer.send(new ProducerRecord<Object, Object>("mytopic", key, json.toString()), new Callback() {
+            producer.send(new ProducerRecord<Object, Object>("streams_wordcount_input", key, json.toString()), new Callback() {
                 
                 @Override
                 public void onCompletion(RecordMetadata metadata, Exception e) {
